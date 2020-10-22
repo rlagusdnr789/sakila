@@ -13,15 +13,14 @@ import sakila.service.*;
 import sakila.vo.*;
 
 @WebServlet("/LoginServlet")
-
 public class LoginServlet extends HttpServlet {
-
+	
 	// 로그인 폼으로 이동
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-
 			throws ServletException, IOException {
 
+		//로그인되면 인덱스페지로
 		HttpSession session = request.getSession();
 
 		if (session.getAttribute("loginStaff") != null) {
